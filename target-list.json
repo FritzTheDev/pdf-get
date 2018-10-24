@@ -1,0 +1,10 @@
+[
+  {
+    "resource_name": "Shasta Reservoir Conditions",
+    "url": "http://cdec.water.ca.gov/cgi-progs/products/shares.pdf"
+  },
+  {
+   "resource_name":"Tulare Lake Precip",
+   "url":"http://cdec.water.ca.gov/cgi-progs/products/PLOT_TSI.pdf"
+  }
+]

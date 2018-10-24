@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Water Supply Update Tool</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <h1 class="text-center display-3">PDF-Getter v2</h1>
+  <hr>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Placeholder Sidebar -->
+      <div class="col-md-3">
+        <ul class="list-group" id="list-tab" role="tablist">
+          <button class="list-group-item list-group-action active">PDF Getter</button>
+        </ul>
+      </div>
+      <!-- Main Content -->
+      <div class="col-md-9">
+        <h3 class="text-center">Resource List</h3>
+        <ul class="list-group" id="contentList">
+          <button class="list-group-item list-group-action list-group-item-dark">Add a Resource</button>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+  const electron = require('electron');
+  const fs = require('fs');
+  const { ipcRenderer } = electron;
+  const sendContent = () => {
+    ipcRenderer.send('item:add', stringContent);
+  };
+  fs.readFile('target-list.json', (err, data) => {
+    if (err) throw err;
+    const parsedJson = (JSON.parse(data));
+    const contentList = document.getElementById("contentList");
+    parsedJson.map(x => {
+      const button = document.createElement('button');
+      button.classList.add('list-group-item', 'list-group-action');
+      button.textContent = x.resource_name;
+      contentList.appendChild(button);
+    });
+  });
+  </script>
+</body>
+</html>

@@ -7,17 +7,17 @@ const fs = require('fs');
 const { app, BrowserWindow, Menu, ipcMain } = electron;
 
 //create global reference to window to dodge garbage collection
-let mainWindow;
+let pdfGetter;
 
 //listen for ready
 app.on('ready', () => {
 
   //create new window
-  mainWindow = new BrowserWindow({height: 800, width: 1200});
+  pdfGetter = new BrowserWindow({height: 800, width: 1200});
 
   //load html into window
-  mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'mainwindow.html'),
+  pdfGetter.loadURL(url.format({
+    pathname: path.join(__dirname, 'pdf-getter.html'),
     protocol: 'file:',
     slashes: true
   })); //above three lines == file://dirname/mainwindow.html
@@ -28,14 +28,6 @@ app.on('ready', () => {
   //set menu
   // Menu.setApplicationMenu(mainMenu);
 });
-
-ipcMain.on('item:add', (e, item) => {
-  console.log(item);
-  fs.writeFileSync('config.json', item, (err) => {
-    console.log('Error adding to list. Contact Fritz');
-  });
-});
-
 //main menu template
 const mainMenuTemplate = [
   {

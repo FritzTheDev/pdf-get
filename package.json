@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/OttoVBismarck/pdf-get/issues"
   },
-  "homepage": "https://github.com/OttoVBismarck/pdf-get#readme"
+  "homepage": "https://github.com/OttoVBismarck/pdf-get#readme",
+  "dependencies": {
+    "electron": "^3.0.5"
+  }
 }

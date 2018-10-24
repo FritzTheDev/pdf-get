@@ -1,10 +1,58 @@
 [
   {
+    "resource_name": "Statewide Summary of Snow Water",
+    "url": "http://cdec.water.ca.gov/cgi-progs/products/swccond.pdf"
+  },
+  {
+    "resource_name": "California Snow Water Plot",
+    "url": "http://cdec.water.ca.gov/cgi-progs/products/PLOT_SWC.pdf"
+  },
+  {
+    "resource_name": "North Sierra Precip",
+    "url": "http://cdec.water.ca.gov/cgi-progs/products/PLOT_ESI.pdf"
+  },
+  {
+    "resource_name": "San Joaquin Precip",
+    "url": "http://cdec.water.ca.gov/cgi-progs/products/PLOT_FSI.pdf"
+  },
+  {
+    "resource_name": "Tulare Lake Precip",
+    "url": "http://cdec.water.ca.gov/cgi-progs/products/PLOT_TSI.pdf"
+  },
+  {
+    "resource_name": "All Reservoir Conditions",
+    "url": "http://cdec.water.ca.gov/cgi-progs/products/rescond.pdf"
+  },  
+  {
+    "resource_name": "Flood Control Reservoir Conditions",
+    "url": "http://cdec.water.ca.gov/cgi-progs/products/floodcontrol.pdf"
+  },
+  {
     "resource_name": "Shasta Reservoir Conditions",
     "url": "http://cdec.water.ca.gov/cgi-progs/products/shares.pdf"
   },
   {
-   "resource_name":"Tulare Lake Precip",
-   "url":"http://cdec.water.ca.gov/cgi-progs/products/PLOT_TSI.pdf"
+    "resource_name": "San Luis Reservoir Conditions",
+    "url": "http://cdec.water.ca.gov/cgi-progs/products/snlres.pdf"
+  },
+  {
+    "resource_name": "Millerton Lake Reservoir Conditions",
+    "url": "http://cdec.water.ca.gov/cgi-progs/products/milres.pdf"
+  },
+  {
+    "resource_name": "New Melones Reservoir Conditions",
+    "url": "http://cdec.water.ca.gov/cgi-progs/products/nmlres.pdf"
+  },
+  {
+    "resource_name": "Trinity Reservoir Conditions",
+    "url": "http://cdec.water.ca.gov/cgi-progs/products/trires.pdf"
+  },
+  {
+    "resource_name": "Folsom Lake Reservoir Conditions",
+    "url": "http://cdec.water.ca.gov/cgi-progs/products/folres.pdf"
+  },
+  {
+    "resource_name": "Lake Oroville Reservoir Conditions",
+    "url": "http://cdec.water.ca.gov/cgi-progs/products/orores.pdf"
   }
 ]

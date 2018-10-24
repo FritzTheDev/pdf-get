@@ -10,10 +10,11 @@
   <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script>
   const electron = require('electron');
-  const content = {'Favorite Meme': 'Pepe'};
+  const content = {favMeme: 'Pepe'};
+  const stringContent = JSON.stringify(content);
   const { ipcRenderer } = electron;
   const sendContent = () => {
-    ipcRenderer.send('item:add', content);
+    ipcRenderer.send('item:add', stringContent);
   };
   setTimeout(sendContent, 1000);
   </script>

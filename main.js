@@ -3,7 +3,7 @@ const url = require('url');
 const path = require('path');
 
 //get electron properties via destructuring
-const { app, BrowserWindow, Menu } = electron;
+const { app, BrowserWindow, Menu, ipcMain } = electron;
 
 //create global reference to window to dodge garbage collection
 let mainWindow;
@@ -22,11 +22,15 @@ app.on('ready', () => {
   })); //above three lines == file://dirname/mainwindow.html
 
   //build menu from template
-  const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
+  // const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
 
   //set menu
-  Menu.setApplicationMenu(mainMenu);
+  // Menu.setApplicationMenu(mainMenu);
 });
+
+ipcMain.on('item:add', (e, item) => {
+  console.log(item);
+})
 
 //main menu template
 const mainMenuTemplate = [

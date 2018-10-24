@@ -10,7 +10,7 @@
   <hr>
   <div class="container-fluid">
     <div class="row">
-      <!-- Placeholder Sidebar -->
+      <!-- Nav Sidebar -->
       <div class="col-md-3">
         <ul class="list-group pad-fix" id="list-tab" role="tablist">
           <li class="text-center list-group-item list-group-action list-group-item-info">Menu</li>
@@ -24,9 +24,10 @@
         <ul class="list-group" id="contentList">
         </ul>
       </div>
+      <!-- Action Sidebar -->
       <div class="col-md-3">
         <ul class="list-group pad-fix">
-        <button class="text-center list-group-item list-group-action list-group-item-success">Get Today's Pdfs</button>
+        <button id="getPdfBtn" class="text-center list-group-item list-group-action list-group-item-success">Get Today's Pdfs</button>
         </ul>
       </div>
     </div>
@@ -35,24 +36,5 @@
   <script src="./node_modules/jquery/dist/jquery.min.js"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="./pdf-getter-stuff/pdf-getter-script.js"></script>
-  <!-- <script>
-  const electron = require('electron');
-  const fs = require('fs');
-  const { ipcRenderer } = electron;
-  const sendContent = () => {
-    ipcRenderer.send('item:add', stringContent);
-  };
-  fs.readFile('target-list.json', (err, data) => {
-    if (err) throw err;
-    const parsedJson = (JSON.parse(data));
-    const contentList = document.getElementById("contentList");
-    parsedJson.map(x => {
-      const button = document.createElement('button');
-      button.classList.add('list-group-item', 'list-group-action');
-      button.textContent = x.resource_name;
-      contentList.appendChild(button);
-    });
-  });
-  </script> -->
 </body>
 </html>

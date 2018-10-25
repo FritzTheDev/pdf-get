@@ -21,7 +21,7 @@ function getPdfs() {
   fs.mkdirSync(`./temp/${today.toDateString()}`);
   list.map(x => {
     request(x.url).pipe(fs.createWriteStream(`./temp/${today.toDateString()}/${x.resource_name}.pdf`));
-  })
+  });
 }
 
 getPdfButton.addEventListener("click", () => {getPdfs()});

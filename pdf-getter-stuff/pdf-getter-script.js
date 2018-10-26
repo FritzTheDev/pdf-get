@@ -24,7 +24,7 @@ function getPdfs() {
   });
 }
 
-getPdfButton.addEventListener("click", () => {getPdfs()});
+getPdfButton.addEventListener("click", () => { getPdfs() });
 populateList();
 
 //helper function that gets & parses the list of targeted pdfs

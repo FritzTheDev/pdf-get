@@ -7,3 +7,5 @@ There's two main "Pages" in the electron app, "Pdf-Getter" and "Reservoir Summar
 
 ### PDF-Getter
 PDF-Getter, as you might imagine, gets a selection of pdfs. It's designed as a tool targeting data from the california data exchange center, but in theory it'd work for any given PDF with an accessible URL. The configuration dictating which PDFS are targeted is stored locally in a JSON file.
+
+### Reservoir Analysis Summary

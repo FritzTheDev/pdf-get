@@ -9,10 +9,10 @@ const getPdfButton = document.getElementById("getPdfBtn");
 function populateList() {
   const parsedJson = getListObjs();
   parsedJson.map(x => {
-    const button = document.createElement('button');
-    button.classList.add('list-group-item', 'list-group-action');
-    button.textContent = x.resource_name;
-    contentList.appendChild(button);
+    const li = document.createElement('li');
+    li.classList.add('list-group-item', 'list-group-action');
+    li.textContent = x.resource_name;
+    contentList.appendChild(li);
   });
 }
 function getPdfs() {

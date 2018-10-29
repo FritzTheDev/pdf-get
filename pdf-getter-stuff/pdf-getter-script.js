@@ -2,6 +2,9 @@
 const fs = require('fs');
 const request = require('request');
 
+//importing IpcRenderer with destructuring
+const { ipcRenderer } = require('electron');
+
 //getting DOM elements
 //contentList is populated with the list of targets
 const contentList = document.getElementById("contentList");
@@ -42,6 +45,10 @@ function getPdfs() {
 //     request(x.url).pipe(fs.createWriteStream(`./temp/${today.toDateString()}/${x.resource_name}.pdf`));
 //   });
 }
+
+const switchTab = () => {
+  ipcRenderer.send('switchToSummarizer');
+};
 
 //calls the function that populates the list. 
 populateList();

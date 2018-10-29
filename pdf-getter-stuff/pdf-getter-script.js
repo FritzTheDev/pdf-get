@@ -43,8 +43,5 @@ function getPdfs() {
 //   });
 }
 
-//attach an event handler for the "Get Pdfs" button
-// getPdfButton.addEventListener("click", () => { getPdfs() });
-
 //calls the function that populates the list. 
 populateList();

@@ -19,14 +19,15 @@ function getPdfs() {
   const today = new Date();
   const list = getListObjs();
   fs.mkdirSync(`./temp/${today.toDateString()}`);
-  list.map(x => {
-    // getOnePdf(x);
-    request(x.url).pipe(fs.createWriteStream(`./temp/${today.toDateString()}/${x.resource_name}.pdf`));
-  });
-}
-
-async function getOnePdf(x) {
-  await request(x.url).pipe(fs.createWriteStream(`./temp/${today.toDateString()}/${x.resource_name}.pdf`));
+  for (x = 0; x < list.length; x++) {
+    request(list[x].url).pipe(fs.createWriteStream(`./temp/${today.toDateString()}/${list[x].resource_name}.pdf`), () => {
+      console.log('Downloaded Resource' + (x+1))
+    });
+  };
+  //changed from streams to iterator + callbacks because of trouble with incomplete downloads
+//   list.map(x => {
+//     request(x.url).pipe(fs.createWriteStream(`./temp/${today.toDateString()}/${x.resource_name}.pdf`));
+//   });
 }
 getPdfButton.addEventListener("click", () => { getPdfs() });
 populateList();

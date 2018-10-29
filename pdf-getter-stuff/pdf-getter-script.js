@@ -20,10 +20,14 @@ function getPdfs() {
   const list = getListObjs();
   fs.mkdirSync(`./temp/${today.toDateString()}`);
   list.map(x => {
+    // getOnePdf(x);
     request(x.url).pipe(fs.createWriteStream(`./temp/${today.toDateString()}/${x.resource_name}.pdf`));
   });
 }
 
+async function getOnePdf(x) {
+  await request(x.url).pipe(fs.createWriteStream(`./temp/${today.toDateString()}/${x.resource_name}.pdf`));
+}
 getPdfButton.addEventListener("click", () => { getPdfs() });
 populateList();
 

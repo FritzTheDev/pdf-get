@@ -33,8 +33,11 @@ function getPdfs() {
   const list = getListObjs();
   fs.mkdirSync(`./temp/${today.toDateString()}`);
   for (x = 0; x < list.length; x++) {
-    request(list[x].url).pipe(fs.createWriteStream(`./temp/${today.toDateString()}/${list[x].resource_name}.pdf`), () => {
-      console.log('Downloaded Resource' + (x+1))
+    request(list[x].url).pipe(fs.createWriteStream(`./temp/${today.toDateString()}/${list[x].resource_name}.pdf`), (error, res, body) => {
+      if (error) throw error;
+      console.log(res.statusCode);
+      console.log(list[x].resource_name);
+      console.log('__________________________________');
     });
   };
   //changed from streams to iterator + callbacks because of trouble with frequent incomplete downloads

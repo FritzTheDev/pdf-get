@@ -35,9 +35,6 @@ function getPdfs() {
   for (x = 0; x < list.length; x++) {
     request(list[x].url).pipe(fs.createWriteStream(`./temp/${today.toDateString()}/${list[x].resource_name}.pdf`), (error, res, body) => {
       if (error) throw error;
-      console.log(res.statusCode);
-      console.log(list[x].resource_name);
-      console.log('__________________________________');
     });
   };
   //changed from streams to iterator + callbacks because of trouble with frequent incomplete downloads
@@ -47,7 +44,7 @@ function getPdfs() {
 }
 
 //attach an event handler for the "Get Pdfs" button
-getPdfButton.addEventListener("click", () => { getPdfs() });
+// getPdfButton.addEventListener("click", () => { getPdfs() });
 
 //calls the function that populates the list. 
 populateList();

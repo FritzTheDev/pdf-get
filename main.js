@@ -21,16 +21,12 @@ app.on('ready', () => {
     protocol: 'file:',
     slashes: true
   })); //above three lines == file://dirname/mainwindow.html
-
-  //build menu from template
-  // const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
-
-  //set menu
-  // Menu.setApplicationMenu(mainMenu);
 });
-//main menu template
-const mainMenuTemplate = [
-  {
-    label: 'File',
-  }
-]
+
+ipcMain.on('switchToSummarizer', () => {
+  pdfGetter.loadURL(url.format({
+    pathname: path.join(__dirname, 'summarizer.html'),
+    protocol: 'file:',
+    slashes: true
+  }));
+});

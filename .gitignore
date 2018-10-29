@@ -2,4 +2,6 @@ node_modules
 temp
 release-build
 zipped-build.zip
+EasyWSU-win32-x64.zip
 EasyWSU-win32-x64
+overwrite-win32-x64

@@ -51,4 +51,4 @@ const switchTab = () => {
 };
 
 //calls the function that populates the list. 
-populateList();
+populateList()

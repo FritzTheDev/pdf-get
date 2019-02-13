@@ -1,7 +1,7 @@
 # Easy-WSU (Water Supply Update)
 
 ## Easy-WSU makes reservoir analysis & mass pdf downloads easy.
-This is a project I've built on behalf of The Water Agency, Inc, a company that does consulting for water transactions in California's Central Valley. They gather data to compile a weekly report that previously took a full day to put together. This tool saves 2 man-hours a week that were previously spent gathering data & massaging it into a usable form.
+This is a project I've built on behalf of The Water Agency, Inc, a company that does consulting for water transactions in California's Central Valley. They gather data to compile a weekly report that previously took a full day to put together. This tool saves 1 man-hour a week that was previously spent gathering data & massaging it into a usable form.
 ---
 There's two main "Pages" in the electron app, "Pdf-Getter" and "Reservoir Summary Generator", which also happen to describe the two main functionalities.
 
